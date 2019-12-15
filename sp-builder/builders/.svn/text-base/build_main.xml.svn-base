@@ -1,0 +1,11 @@
+<projects>
+	<project name="main-kernel" dir="main-kernel" type="bundle" />
+	<project name="main-administration" dir="main-administration" type="bundle" />
+	<project name="main-channels" dir="main-channels" type="bundle" />
+	<project name="main-streams" dir="main-streams" type="bundle" />
+	<project name="main-services" dir="main-services" type="bundle" />
+	<project name="main-executer" dir="main-executer" type="bundle" />
+	<project name="main-monitoring" dir="main-monitoring" type="bundle" />
+	<project name="main-persistence" dir="main-persistence" type="bundle" />
+	<project name="main-statistics" dir="main-statistics" type="bundle" />
+</projects>

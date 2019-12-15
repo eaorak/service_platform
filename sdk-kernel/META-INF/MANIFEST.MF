@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sdk-kernel
+Bundle-SymbolicName: sdk-kernel
+Bundle-Version: 1.0.0
+Bundle-Activator: com.ericsson.etelcrm.bil.kernel.SdkActivator
+Bundle-Vendor: Ericsson
+Require-Bundle: org.eclipse.core.runtime,
+ org.apache.log4j;bundle-version="1.2.15"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: com.ericsson.etelcrm.bil.kernel

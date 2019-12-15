@@ -1,0 +1,82 @@
+package com.adenon.sp.persistence.test;
+
+import java.sql.Connection;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Test;
+
+import com.adenon.sp.administration.AdministrationException;
+import com.adenon.sp.administration.IAdministrationService;
+import com.adenon.sp.administration.IBeanHelper;
+import com.adenon.sp.kernel.osgi.BundleInfo;
+import com.adenon.sp.kernel.osgi.Services;
+import com.adenon.sp.persistence.IDbPool;
+import com.adenon.sp.persistence.IPoolConfig;
+import com.adenon.sp.persistence.PersistenceService;
+
+
+public class TestPersistenceService {
+
+    class Administration implements IAdministrationService {
+
+        @Override
+        public <T> T registerBean(T beanObj) throws AdministrationException {
+            // VASTODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public <T> IBeanHelper<T> getBeans(Class<T> beanClass) throws AdministrationException {
+            // VASTODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public boolean unregisterBean(Object bean) throws AdministrationException {
+            // VASTODO Auto-generated method stub
+            return false;
+        }
+
+    }
+
+    class MockServices extends Services {
+
+        public MockServices(BundleInfo headers) {
+            super(headers);
+        }
+
+        private final Map<Class<?>, Object> serviceMap = new HashMap<Class<?>, Object>();
+
+        @SuppressWarnings("unchecked")
+        @Override
+        public <T> T getService(Class<T> srvIface) {
+            return (T) this.serviceMap.get(srvIface);
+        }
+
+        public <T> void add(Class<T> srvIface,
+                            T service) {
+            this.serviceMap.put(srvIface, service);
+        }
+    }
+
+    @Test
+    public void testPersistence() throws Exception {
+        MockServices mockServices = this.initPersistence();
+        PersistenceService persistence = null; // new PersistenceService(mockServices);
+        IPoolConfig config = persistence.newConfig("my_pool", "jdbc:mysql://localhost:3306/spdb");
+        config.setCredentials("root", "root");
+        IDbPool pool = persistence.createPool(config);
+        Connection connection = pool.getConnection();
+        System.out.println("Got the connection !  " + connection);
+
+    }
+
+    private MockServices initPersistence() {
+        Administration administration = new Administration();
+        MockServices mockServices = new MockServices(null);
+        mockServices.add(IAdministrationService.class, administration);
+        return mockServices;
+    }
+
+}

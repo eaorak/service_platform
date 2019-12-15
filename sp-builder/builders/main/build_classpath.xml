@@ -1,0 +1,183 @@
+<project name="sp.classpath" basedir=".">
+
+	<path id="classpath.general">
+		<fileset dir="${master.dir}/sp-builder/resources/osgi/lib/">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${master.dir}/sp-builder/resources/bundles/">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- API Bundles -->
+
+	<path id="classpath.lib-common">
+		<pathelement path="${master.dir}/lib-common/@dot" />
+		<pathelement path="${master.dir}/lib-common/bin/" />
+	</path>
+
+	<path id="classpath.api-kernel">
+		<pathelement path="${master.dir}/api-kernel/@dot" />
+		<pathelement path="${master.dir}/api-kernel/bin/" />
+		<fileset dir="${master.dir}/api-kernel/resources/lib/">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="classpath.api-statistics">
+		<pathelement path="${master.dir}/api-statistics/@dot" />
+		<pathelement path="${master.dir}/api-statistics/bin/" />
+	</path>
+
+	<path id="classpath.api-monitoring">
+		<pathelement path="${master.dir}/api-monitoring/@dot" />
+		<pathelement path="${master.dir}/api-monitoring/bin/" />
+	</path>
+
+	<path id="classpath.api-persistence">
+		<pathelement path="${master.dir}/api-persistence/@dot" />
+		<pathelement path="${master.dir}/api-persistence/bin/" />
+	</path>
+
+	<path id="classpath.main-persistence">
+		<pathelement path="${master.dir}/main-persistence/@dot" />
+		<pathelement path="${master.dir}/main-persistence/bin/" />
+		<fileset dir="${master.dir}/main-persistence/resources/lib/">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="classpath.main-statistics">
+		<pathelement path="${master.dir}/main-statistics/@dot" />
+		<pathelement path="${master.dir}/main-statistics/bin/" />
+		<fileset dir="${master.dir}/main-statistics/resources/lib/">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	
+	<path id="classpath.main-monitoring">
+		<pathelement path="${master.dir}/main-monitoring/@dot" />
+		<pathelement path="${master.dir}/main-monitoring/bin/" />
+	</path>
+
+	<path id="classpath.api-administration">
+		<pathelement path="${master.dir}/api-administration/@dot" />
+		<pathelement path="${master.dir}/api-administration/bin/" />
+		<fileset dir="${master.dir}/api-administration/resources/lib/">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="classpath.api-channels">
+		<pathelement path="${master.dir}/api-channels/@dot" />
+		<pathelement path="${master.dir}/api-channels/bin/" />
+	</path>
+
+	<path id="classpath.api-streams">
+		<pathelement path="${master.dir}/api-streams/@dot" />
+		<pathelement path="${master.dir}/api-streams/bin/" />
+	</path>
+
+	<path id="classpath.api-services">
+		<pathelement path="${master.dir}/api-services/@dot" />
+		<pathelement path="${master.dir}/api-services/bin/" />
+	</path>
+
+	<path id="classpath.api-executer">
+		<pathelement path="${master.dir}/api-executer/@dot" />
+		<pathelement path="${master.dir}/api-executer/bin/" />
+	</path>
+
+	<!-- Main Bundles -->
+
+	<path id="classpath.main-administration">
+		<pathelement path="${master.dir}/main-administration/@dot" />
+		<pathelement path="${master.dir}/main-administration/bin/" />
+		<fileset dir="${master.dir}/main-administration/resources/lib/">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="classpath.main-kernel">
+		<pathelement path="${master.dir}/main-kernel/@dot" />
+		<pathelement path="${master.dir}/main-kernel/bin/" />
+	</path>
+
+	<path id="classpath.main-channels">
+		<pathelement path="${master.dir}/main-channels/@dot" />
+		<pathelement path="${master.dir}/main-channels/bin/" />
+	</path>
+
+	<path id="classpath.main-streams">
+		<pathelement path="${master.dir}/main-streams/@dot" />
+		<pathelement path="${master.dir}/main-streams/bin/" />
+	</path>
+
+	<path id="classpath.main-services">
+		<pathelement path="${master.dir}/main-services/@dot" />
+		<pathelement path="${master.dir}/main-services/bin/" />
+	</path>
+
+	<path id="classpath.main-executer">
+		<pathelement path="${master.dir}/main-executer/@dot" />
+		<pathelement path="${master.dir}/main-executer/bin/" />
+	</path>
+
+	<!-- Main Bundles -->
+
+	<path id="classpath.channel-test">
+		<pathelement path="${master.dir}/channel-test/@dot" />
+		<pathelement path="${master.dir}/channel-test/bin/" />
+	</path>
+
+	<path id="classpath.channel-test-api">
+		<pathelement path="${master.dir}/channel-test-api/@dot" />
+		<pathelement path="${master.dir}/channel-test-api/bin/" />
+	</path>
+
+	<path id="classpath.channel-webservice">
+		<pathelement path="${master.dir}/channel-webservice/@dot" />
+		<pathelement path="${master.dir}/channel-webservice/bin/" />
+	</path>
+
+	<path id="classpath.channel-webservice-api">
+		<pathelement path="${master.dir}/channel-webservice-api/@dot" />
+		<pathelement path="${master.dir}/channel-webservice-api/bin/" />
+	</path>
+
+	<path id="classpath.channel-sms">
+		<pathelement path="${master.dir}/channel-sms/@dot" />
+		<pathelement path="${master.dir}/channel-sms/bin/" />
+	</path>
+
+	<path id="classpath.channel-sms-api">
+		<pathelement path="${master.dir}/channel-sms-api/@dot" />
+		<pathelement path="${master.dir}/channel-sms-api/bin/" />
+	</path>
+
+	<path id="classpath.channel-sms-server-api">
+		<pathelement path="${master.dir}/channel-sms-server-api/@dot" />
+		<pathelement path="${master.dir}/channel-sms-server-api/bin/" />
+	</path>
+
+	<path id="classpath.channel-sss-api">
+		<pathelement path="${master.dir}/channel-sss-api/@dot" />
+		<pathelement path="${master.dir}/channel-sss-api/bin/" />
+	</path>
+
+	<path id="classpath.channel-sss">
+		<pathelement path="${master.dir}/channel-sss/@dot" />
+		<pathelement path="${master.dir}/channel-sss/bin/" />
+	</path>
+
+	<path id="classpath.lib-smpp">
+		<pathelement path="${master.dir}/lib-smpp/@dot" />
+		<pathelement path="${master.dir}/lib-smpp/bin/" />
+	</path>
+
+	<path id="classpath.frag-classloading">
+		<pathelement path="${master.dir}/frag-classloading/@dot" />
+		<pathelement path="${master.dir}/frag-classloading/bin/" />
+	</path>
+
+</project>

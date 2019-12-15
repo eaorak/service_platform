@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Export-Package: com.adenon.sp.statistics,
+ com.adenon.sp.statistics.info
+Bundle-Name: main-statistics
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.apache.log4j,
+ api-administration;bundle-version="1.0.0",
+ api-kernel;bundle-version="1.0.0",
+ api-monitoring;bundle-version="1.0.0",
+ api-executer;bundle-version="1.3.0",
+ api-persistence;bundle-version="1.0.0",
+ api-statistics;bundle-version="1.0.0"
+Bundle-Vendor: Adenon
+Bundle-Version: 1.3.0
+Bundle-ManifestVersion: 2
+Bundle-Activator: com.adenon.sp.statistics.StatisticsActivator
+Import-Package: javax.persistence;version="2.0.3",
+ org.osgi.framework;version="1.3.0"
+Bundle-SymbolicName: main-statistics
+

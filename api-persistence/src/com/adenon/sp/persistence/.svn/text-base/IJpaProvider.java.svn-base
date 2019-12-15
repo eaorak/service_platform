@@ -1,0 +1,9 @@
+package com.adenon.sp.persistence;
+
+import javax.persistence.EntityManager;
+
+public interface IJpaProvider {
+
+    EntityManager entityManager(SystemPool pool);
+
+}

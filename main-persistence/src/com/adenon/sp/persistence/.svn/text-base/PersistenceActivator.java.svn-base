@@ -1,0 +1,28 @@
+package com.adenon.sp.persistence;
+
+import com.adenon.sp.administration.IAdministrationService;
+import com.adenon.sp.kernel.osgi.activator.BundleActivator;
+import com.adenon.sp.persistence.jpa.JpaProviderService;
+
+
+public class PersistenceActivator extends BundleActivator {
+
+    private JpaProviderService jpaProvider;
+
+    @Override
+    protected void start() throws Exception {
+        this.getServices(IAdministrationService.class);
+        PersistenceService persistence = new PersistenceService(this.services, this.confPath);
+        this.registerService(IPersistenceService.class, persistence);
+        //
+        this.jpaProvider = new JpaProviderService(this.services, persistence);
+        this.registerService(IJpaProvider.class, this.jpaProvider);
+    }
+
+    @Override
+    protected void stop() throws Exception {
+        this.jpaProvider.close();
+    }
+
+
+}

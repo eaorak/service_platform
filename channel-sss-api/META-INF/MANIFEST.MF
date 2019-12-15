@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Channel-sss-api
+Bundle-SymbolicName: channel-sss-api
+Bundle-Version: 1.0.0.0
+Bundle-Activator: com.adenon.sp.channel.sss.api.SmsApiActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.osgi.framework;version="1.3.0"
+Require-Bundle: api-channels;bundle-version="1.0.0",
+ org.apache.log4j;bundle-version="1.2.15",
+ api-kernel;bundle-version="1.0.0"
+Export-Package: com.adenon.channel.sss.api,
+ com.adenon.channel.sss.api.constant,
+ com.adenon.channel.sss.api.message,
+ com.adenon.channel.sss.api.message.handler,
+ com.adenon.channel.sss.api.operation
+Bundle-Vendor: Adenon

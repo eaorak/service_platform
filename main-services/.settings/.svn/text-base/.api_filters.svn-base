@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="com.adenon.sdf.see" version="2">
+    <resource path="src/com/adenon/sdf/see/framework/servicebox/impl/ServiceBox.java" type="com.adenon.sdf.see.framework.servicebox.impl.ServiceBox">
+        <filter id="576725006">
+            <message_arguments>
+                <message_argument value="IServiceBoxInternal"/>
+                <message_argument value="ServiceBox"/>
+            </message_arguments>
+        </filter>
+        <filter id="643842064">
+            <message_arguments>
+                <message_argument value="IServiceBoxRuntimeInfo"/>
+                <message_argument value="ServiceBox"/>
+                <message_argument value="getRuntimeInfo()"/>
+            </message_arguments>
+        </filter>
+    </resource>
+</component>

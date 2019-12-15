@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: main-streams
+Bundle-SymbolicName: main-streams
+Bundle-Version: 1.0.0
+Bundle-Activator: com.adenon.sp.streams.StreamsActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: javax.persistence;version="2.0.3",
+ org.apache.log4j;version="1.2.15",
+ org.osgi.framework;version="1.3.0"
+Require-Bundle: api-streams;bundle-version="1.0.0",
+ api-kernel;bundle-version="1.0.0",
+ api-executer;bundle-version="1.3.0",
+ api-channels;bundle-version="1.0.0",
+ api-persistence;bundle-version="1.0.0"
+Bundle-Vendor: Adenon

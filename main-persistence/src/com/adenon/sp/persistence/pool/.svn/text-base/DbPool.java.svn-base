@@ -1,0 +1,58 @@
+package com.adenon.sp.persistence.pool;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.adenon.sp.administration.IAdministrationService;
+import com.adenon.sp.kernel.osgi.Services;
+import com.adenon.sp.kernel.utils.Properties;
+import com.adenon.sp.persistence.Dao;
+import com.adenon.sp.persistence.IDbPool;
+import com.adenon.sp.persistence.SystemPool;
+import com.jolbox.bonecp.BoneCP;
+
+
+public class DbPool implements IDbPool {
+
+    private final BoneCP pool;
+    private DbPoolConfig config;
+
+    public static DbPool createSystemPool(SystemPool sysPool,
+                                          Properties props,
+                                          Services services) throws Exception {
+        return createPool(DbPoolConfig.createConfig(sysPool, props), services);
+    }
+
+    public static DbPool createPool(DbPoolConfig config,
+                                    Services services) throws Exception {
+        IAdministrationService administration = services.getService(IAdministrationService.class);
+        DbPool dbPool = new DbPool(config);
+        dbPool.config = administration.registerBean(dbPool.getConfig());
+        return dbPool;
+    }
+
+    private DbPool(DbPoolConfig config) throws SQLException {
+        this.config = config;
+        this.pool = new BoneCP(config.getBoneCpConfig());
+    }
+
+    @Override
+    public Connection getConnection() throws SQLException {
+        return this.pool.getConnection();
+    }
+
+    @Override
+    public DbPoolConfig getConfig() {
+        return this.config;
+    }
+
+    @Override
+    public Dao newDao() throws SQLException {
+        return Dao.newDao(this.getConnection());
+    }
+
+    public void close() {
+        this.pool.close();
+    }
+
+}

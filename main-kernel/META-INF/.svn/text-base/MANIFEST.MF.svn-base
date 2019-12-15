@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ClassPath: .,
+ resources/lib/javassist.jar
+Bundle-Name: main-kernel
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.apache.log4j;bundle-version="1.2.15",
+ api-kernel;bundle-version="1.0.0"
+Bundle-Vendor: Adenon
+Bundle-Version: 1.0.0
+Bundle-Activator: com.adenon.sp.kernel.KernelActivator
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: main-kernel
+Import-Package: com.adenon.sp.kernel.utils,
+ org.osgi.framework;version="1.3.0"
+Export-Package: com.adenon.sp.kernel.codegen

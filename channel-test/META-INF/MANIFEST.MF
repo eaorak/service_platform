@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-ClassPath: .
+Bundle-Name: adaptor-test
+Bundle-SymbolicName: channel-test
+Bundle-Version: 1.0.0
+Bundle-Activator: com.adenon.sp.channel.test.TestChannelActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.osgi.framework;version="1.3.0"
+Require-Bundle: org.apache.log4j,
+ api-kernel;bundle-version="1.0.0",
+ api-channels;bundle-version="1.0.0",
+ channel-test-api;bundle-version="1.0.0"

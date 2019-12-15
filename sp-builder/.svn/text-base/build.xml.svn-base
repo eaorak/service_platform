@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build-all-local" name="SP">
+
+	<property name="master.dir" value="${basedir}/.." />
+
+	<import file="./builders/main/build_directory.xml" />
+	<import file="./builders/main/build_type.xml" />
+
+	<!-- === [build-all-local][debug] build repository for debug== -->
+	<target name="build-all-local" depends="build-repository,build-all-bundles" description="This target prepares everything for local run and debug.">
+	</target>
+	
+	<!-- === [init] Initialize properties == -->
+	<target name="init">
+		<fail unless="SP_HOME" />
+		<property name="builder.bin" value="resources/bin" />
+		<property name="builder.bundles" value="resources/bundles" />
+		<property name="builder.conf" value="resources/conf" />
+		<property name="builder.osgi" value="resources/osgi" />
+	</target>
+
+	<!-- === [build-repository-dirs] Builds all directories == -->
+	<target name="build-repository-dirs" depends="init" if="SP_HOME">
+		<mkdir dir="${SP_HOME}" />
+		<mkdir dir="${dir.bin}" />
+		<mkdir dir="${dir.misc}" />
+		<!--
+		<mkdir dir="${dir.conf}" />
+		<mkdir dir="${dir.conf.bundles}" />
+		-->
+		<mkdir dir="${dir.logs}" />
+		<mkdir dir="${dir.logs.bundles}" />
+		<mkdir dir="${dir.logs.services}" />
+		<mkdir dir="${dir.osgi}" />
+		<mkdir dir="${dir.osgi.bundles}" />
+		<mkdir dir="${dir.repo}" />
+		<mkdir dir="${dir.repo.services}" />
+	</target>
+
+	<!-- === [create-repository] Copy all directories == -->
+	<target name="create-repository" depends="build-repository-dirs">
+		<patternset id="sp.excludes">
+			<exclude name="**/CVS" />
+			<exclude name="**/README" />
+		</patternset>
+
+		<copy todir="${dir.bin}" overwrite="true" filtering="true">
+			<fileset dir="${builder.bin}">
+				<patternset refid="sp.excludes" />
+				<include name="*/**" />
+			</fileset>
+		</copy>
+		
+		<copy todir="${dir.conf}" overwrite="true" filtering="true">
+			<fileset dir="${builder.conf}">
+				<patternset refid="sp.excludes" />
+				<include name="*/**" />
+			</fileset>
+		</copy>
+
+		<copy todir="${dir.osgi.bundles}" overwrite="true" filtering="false">
+			<fileset dir="${builder.bundles}">
+				<patternset refid="sp.excludes" />
+				<include name="*/**" />
+			</fileset>
+		</copy>
+
+		<copy todir="${dir.osgi}" overwrite="true" filtering="false">
+			<fileset dir="${builder.osgi}">
+				<patternset refid="sp.excludes" />
+				<include name="*/**" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- === [copy-eclipse-launch] copy osgi launch filr to eclipse == -->
+	<target name="copy-eclipse-launch" depends="init">
+		<copy tofile="${debug.dir}/SP_OSGI.launch" file="${debug.dir}/sp.l" overwrite="true">
+			<filterset>
+				<filter token="*SP_HOME*" value="${SP_HOME}" />
+			</filterset>
+		</copy>
+	</target>
+
+
+	<!-- === [build-repository] build repository for debug== -->
+	<target name="build-repository" depends="init,build-repository-dirs">
+		<antcall target="create-repository">
+			<param name="SP_HOME" value="${SP_HOME}" />
+			<param name="SP_INSTALL_DIRECTORY" value="${SP_HOME}" />
+		</antcall>
+		<echo>
+			*************************************************** VMARGUMENTS *****************************************************
+			 -Dsp.home=${SP_HOME} -Dapp.hostname=hostname -Dlog4j.configuration=file:/${SP_HOME}/log4j.xml -Dcom.adenon.conf.dir=${SP_HOME} -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Declipse.ignoreApp=true -Dosgi.noShutdown=true
+			********************************************************************************************************************
+		</echo>
+	</target>
+
+	<!-- === [zip-build-release][release] : zip SP_HOME === -->
+	<target name="zip-build-release">
+		<zip destfile="./dep/release/SP_${release.beta}.zip">
+			<fileset dir="${SP_HOME}" />
+		</zip>
+	</target>
+
+	<!-- === [build-all-bundles][debug] : Build all bundles to ${SP_HOME} === -->
+	<target name="build-all-bundles" depends="init,build-repository-dirs">
+		<input message="Build Name : " addproperty="result.file" />
+		<property name="destination" value="${dir.osgi.bundles}" />
+		<property name="bdir" value="${basedir}/builders" />
+		<property name="tmp.base-dir" value="${basedir}/tmp" />
+		<property name="tmpdir" value="${tmp.base-dir}/${result.file}" />
+		<property name="source.dir" value="${basedir}/.." />
+		<mkdir dir="${tmpdir}" />
+
+		<tstamp>
+			<format property="now.time" pattern="dd.MM.yyyy HH:mm:ss" />
+		</tstamp>
+
+		<copy todir="${dir.osgi.bundles}" failonerror="true" overwrite="true">
+			<fileset dir="resources/bundles/">
+				<include name="**/*.jar" />
+			</fileset>
+		</copy>
+
+		<echo> ######## Building Service Platform : ${now.time} ######## </echo>
+		<echo> ###### SDKs ###### </echo>
+		<build.from.xml fileName="build_api.xml" baseDir="${bdir}" workspaceDir="${source.dir}" resultFileName="${tmpdir}/api_${result.file}.xml" buildType="debug" />
+		<echo> ###### BUNDLES ###### </echo>
+		<build.from.xml fileName="build_main.xml" baseDir="${bdir}" workspaceDir="${source.dir}" resultFileName="${tmpdir}/main_${result.file}.xml" buildType="debug" />
+		<echo> ###### CHANNELS ###### </echo>
+		<build.from.xml fileName="build_channel.xml" baseDir="${bdir}" workspaceDir="${source.dir}" resultFileName="${tmpdir}/channel_${result.file}.xml" buildType="debug" />
+
+	</target>
+
+
+</project>

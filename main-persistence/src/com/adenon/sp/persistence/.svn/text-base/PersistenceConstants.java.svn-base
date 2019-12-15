@@ -1,0 +1,7 @@
+package com.adenon.sp.persistence;
+
+public class PersistenceConstants {
+
+    public static final String CONFIG_FILE_NAME = "db_connections.properties";
+
+}

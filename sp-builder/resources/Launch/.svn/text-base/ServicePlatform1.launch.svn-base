@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.EquinoxLauncher">
+<booleanAttribute key="append.args" value="true"/>
+<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="true"/>
+<stringAttribute key="com.jprobe.eclipse.core.runtime.JPROBE_ANALYSIS_TYPE" value="memory"/>
+<stringAttribute key="com.jprobe.eclipse.coverage.core-jp_filter" value="com.adenon.api.*.*():include,com.adenon.channel.*.*():include,com.adenon.library.*.*():include,com.adenon.service.*.*():include,com.adenon.smpp.*.*():include,com.adenon.sp.*.*():include,com.adenon.sp.*.*():include"/>
+<stringAttribute key="com.jprobe.eclipse.coverage.core-jp_initial_recording" value="on"/>
+<intAttribute key="com.jprobe.eclipse.coverage.coreCoverageGranularity" value="1"/>
+<stringAttribute key="com.jprobe.eclipse.memory.core-jp_initial_recording" value="traces"/>
+<stringAttribute key="com.jprobe.eclipse.performance.core-jp_collect_data" value="com.adenon.api.*.*():method,com.adenon.channel.*.*():method,com.adenon.library.*.*():method,com.adenon.service.*.*():method,com.adenon.smpp.*.*():method,com.adenon.sp.*.*():method,com.adenon.sp.*.*():method"/>
+<stringAttribute key="com.jprobe.eclipse.performance.core-jp_initial_recording" value="off"/>
+<stringAttribute key="com.jprobe.eclipse.performance.core-jp_instrumentation_config" value="com.arjuna.config,com.bea.config,com.ddtek.config,com.evermind.config,com.ibm.config,com.informix.config,com.microsoft.config,com.mysql.config,com.oracle.config,com.pointbase.config,com.solarmetric.config,com.sun.config,com.sybase.config,db2j.config,java.sql.config,javax.sql.config,kodo.config,net.sourceforge.jtds.config,oracle.config,org.apache.config,org.eclipse.config,org.enhydra.config,org.hibernate.config,org.hsqldb.config,org.jboss.config,org.postgresql.config,org.springframework.config,org.tranql.config,sun.jdbc.config,weblogic.config"/>
+<intAttribute key="com.jprobe.eclipse.performance.core-jp_measurement" value="0"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/ServicePlatform1"/>
+<booleanAttribute key="default" value="true"/>
+<booleanAttribute key="default_auto_start" value="true"/>
+<intAttribute key="default_start_level" value="1"/>
+<stringAttribute key="deselected_workspace_plugins" value="channel-sss,channel-sss-api,channel-test,channel-test-api,channel-webservice,channel-webservice-api,main-persistence,service-sms-test,service-test"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-cp c:\1\frag-classloading_1.0.0.0.jar  -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dosgi.startLevel=200 -DSP_HOME=&quot;C:\sp&quot; -Dosgi.install.area=&quot;file:C:/1&quot; -Dosgi.framework.extensions=&quot;frag-classloading&quot; -Dosgi.framework=&quot;file:C:/1/plugins/org.eclipse.osgi_3.7.1.R37x_v20110808-1106.jar&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="/workspaces"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<booleanAttribute key="show_selected_only" value="true"/>
+<stringAttribute key="target_bundles" value="javax.transaction@default:false,org.apache.log4j*1.2.15.v201005080500@default:default,org.apache.log4j*1.2.15.v201012070815@default:default,org.eclipse.osgi@-1:true,org.hamcrest.core@default:default,org.junit*4.8.2.v4_8_2_v20110321-1705@default:default"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useCustomFeatures" value="false"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<stringAttribute key="workspace_bundles" value="api-administration@2:default,api-channels@2:default,api-executer@2:default,api-kernel@1:default,api-monitoring@2:default,api-persistence@2:default,api-services@2:default,api-statistics@default:default,api-streams@2:default,channel-sms-api@70:default,channel-sms-server-api@70:default,channel-sms-server@71:default,channel-sms@71:default,frag-classloading@default:false,lib-common@2:default,lib-smpp@2:default,main-administration@8:default,main-channels@50:default,main-executer@10:default,main-kernel@1:default,main-monitoring@12:default,main-services@50:default,main-statistics@default:default,main-streams@20:default,service-smstest@80:default,simple-assist-tester@default:default,simple-assist@default:default"/>
+</launchConfiguration>

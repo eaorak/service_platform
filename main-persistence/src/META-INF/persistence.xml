@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="system" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="stats" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+
+	<!-- #### GENERIC PERSISTENCE UNIT DEFINITIONS FOR RUNTIME DBs #### -->
+
+	<persistence-unit name="jpadb1" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb2" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb3" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb4" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb5" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb6" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb7" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb8" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb9" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb10" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb11" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb12" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb13" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb14" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb15" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb16" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb17" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb18" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb19" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb20" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb21" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb22" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb23" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb24" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb25" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb26" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb27" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb28" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb29" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb30" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb31" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb32" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb33" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb34" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb35" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb36" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb37" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb38" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb39" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb40" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb41" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb42" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb43" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb44" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb45" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb46" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb47" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb48" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb49" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+	<persistence-unit name="jpadb50" transaction-type="RESOURCE_LOCAL">
+		<!-- $$CLASSES$$ -->
+	</persistence-unit>
+
+</persistence>

@@ -1,0 +1,31 @@
+10
+
+dir
+314
+svn+ssh://217.131.129.53:2442/SProject/lib-smpp/src/com/adenon/api
+svn+ssh://217.131.129.53:2442/SProject
+
+
+
+2012-03-19T19:06:48.093287Z
+310
+osman
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+7f68d873-d080-406a-949c-fe0898dd6cf5
+
+smpp
+dir
+

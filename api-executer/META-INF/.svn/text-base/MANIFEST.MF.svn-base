@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Export-Package: com.adenon.sp.executer,
+ com.adenon.sp.executer.task,
+ com.adenon.sp.executer.task.cron,
+ com.adenon.sp.executer.task.pool,
+ com.adenon.sp.executer.thread,
+ com.adenon.sp.executer.watchdog
+Bundle-Name: api-channels
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.apache.log4j,
+ api-administration;bundle-version="1.0.0",
+ api-kernel;bundle-version="1.0.0"
+Bundle-Vendor: ADENON
+Bundle-Version: 1.3.0
+Bundle-ManifestVersion: 2
+Bundle-Activator: com.adenon.sp.executer.ApiExecuter
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-SymbolicName: api-executer
+
