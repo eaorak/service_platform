@@ -1,5 +1,0 @@
-system.url=jdbc:mysql://localhost:3306/spdb
-system.user=root
-system.pass=root
-system.minConn=10
-system.maxConn=50

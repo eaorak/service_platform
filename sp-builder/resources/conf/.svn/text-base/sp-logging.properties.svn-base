@@ -1,7 +1,0 @@
-system.log_level = ERROR
-system.override = false
-level.channel-sms-server = DEBUG
-level.main-administration = WARN
-level.main-streams = INFO
-level.main-channels = INFO
-level.channel-webservice = ERROR

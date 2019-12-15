@@ -1,9 +1,0 @@
-package com.adenon.sp.configuration;
-
-import com.adenon.sp.administration.ConfigLocation;
-import com.adenon.sp.administration.annotate.MBean;
-
-@MBean(location = ConfigLocation.SYSTEM, subLocation = "bean1=First Bean")
-public class Bean1 {
-
-}

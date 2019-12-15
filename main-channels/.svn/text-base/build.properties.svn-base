@@ -1,7 +1,0 @@
- output.. = bin/
-bin.includes = META-INF/,\
-               resources/lib/mvel2-2.0.19.jar,\
-               .
-source.. = src/,\
-           resources/lib/,\
-           test/
